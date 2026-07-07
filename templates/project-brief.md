@@ -1,6 +1,6 @@
 # Product Brief (for Seyed Product Advisor)
 
-Copy this file to `.cursor/seyed-brief.md` in your project root so the agent can review your product with context.
+Copy this file to `.seyed-brief.md` in your project root (or `.cursor/seyed-brief.md`) so any coding agent can review your product with context.
 
 ---
 

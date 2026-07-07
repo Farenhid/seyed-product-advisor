@@ -1,36 +1,60 @@
 # Seyed Product Advisor
 
-A [Cursor Agent Skill](https://cursor.com/docs/agent/skills) that gives **product and strategy advice in Seyed's style** — principle-first thinking, design thinking, platform strategy, and culture-as-communication.
+An [Agent Skill](https://agentskills.io) that gives **product and strategy advice in Seyed's style** — principle-first thinking, design thinking, platform strategy, and culture-as-communication.
 
-Works in **any project**. Install once; use everywhere.
+Works in **any coding agent** (Cursor, Claude Code, Cline, Copilot, Amp, Windsurf, …) and in **any project**. Install once; use everywhere.
 
-## Install
-
-```bash
-git clone https://github.com/Farenhid/seyed-product-advisor.git ~/.cursor/skills/seyed-product-advisor
-```
-
-Or use the install script:
+## Install (all agents)
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/Farenhid/seyed-product-advisor/main/scripts/install.sh | bash
 ```
 
-## Optional: project brief
+This clones the repo once to `~/.local/share/seyed-product-advisor` and symlinks it into every supported agent's skills directory:
 
-For better reviews, copy the brief template into your project:
+| Agent | Global path |
+|-------|-------------|
+| Cursor | `~/.cursor/skills/seyed-product-advisor` |
+| Claude Code | `~/.claude/skills/seyed-product-advisor` |
+| Cline | `~/.cline/skills/seyed-product-advisor` |
+| GitHub Copilot | `~/.copilot/skills/seyed-product-advisor` |
+| Amp / generic | `~/.agents/skills/seyed-product-advisor` |
+
+### Team / project install
+
+Share the skill with your repo (committed symlinks):
 
 ```bash
-mkdir -p .cursor
-cp ~/.cursor/skills/seyed-product-advisor/templates/project-brief.md .cursor/seyed-brief.md
-# Edit .cursor/seyed-brief.md with your product context
+cd your-project
+bash /path/to/seyed-product-advisor/scripts/install.sh --project
 ```
 
-The agent reads this **before** giving advice.
+Creates symlinks under `.github/skills/`, `.claude/skills/`, `.cline/skills/`, `.cursor/skills/`, `.agents/skills/`.
+
+### Manual install
+
+Clone once, symlink yourself:
+
+```bash
+git clone https://github.com/Farenhid/seyed-product-advisor.git ~/.local/share/seyed-product-advisor
+ln -sfn ~/.local/share/seyed-product-advisor ~/.claude/skills/seyed-product-advisor
+# repeat for other agents as needed
+```
+
+## Optional: project brief
+
+For better reviews, copy the brief template into your product project:
+
+```bash
+cp ~/.local/share/seyed-product-advisor/templates/project-brief.md .seyed-brief.md
+# Edit .seyed-brief.md with your product context
+```
+
+The agent reads `.seyed-brief.md` (or legacy `.cursor/seyed-brief.md`) **before** giving advice.
 
 ## Usage
 
-Open any project in Cursor and ask:
+Open **any project** in your coding agent and ask in chat:
 
 **English**
 - "Review my product using seyed-product-advisor"
@@ -42,11 +66,15 @@ Open any project in Cursor and ask:
 - «اگر سید بود چی می‌گفت؟» — فیچر، JTBD، رقابت/شریک
 - بدون فریمورک از پیش تعیین‌شده؛ ایجنت خودش جلسه مناسب رو پیدا می‌کنه
 
-## What the agent does
+## How it works (same in every agent)
 
-1. **Scans your project** — README, structure, optional `seyed-brief.md`
-2. **Loads relevant frameworks** — from 95 distilled session chapters
-3. **Responds** in plain language, founder-focused — ends with **Principles Lens**, **Founder Mirror**, and **Session Sources**
+1. **Agent discovers the skill** — reads `name` + `description` from `SKILL.md` frontmatter at startup
+2. **You ask a product question** — agent activates the skill when your prompt matches
+3. **Project scan** — reads your README, structure, optional `.seyed-brief.md`
+4. **Knowledge load** — `principles.md` first, then 2–4 relevant chapters from the index in `SKILL.md`
+5. **Answer** — plain language, founder-focused, with **Principles Lens**, **Founder Mirror**, **Session Sources**
+
+No API, no server, no vector DB. The agent reads markdown files on demand — same behavior everywhere.
 
 ### Modes
 
@@ -61,8 +89,8 @@ See [workflows/](workflows/) for protocols. **Copy-ready prompts:** [workflows/e
 
 | File | Purpose |
 |------|---------|
+| `SKILL.md` | Entry point — frameworks, topic index, chapter index |
 | `principles.md` | Foundational principles (read first by agent) |
-| `SKILL.md` | Core frameworks + chapter index |
 | `chapters/` | 95 session distillations (loaded on demand) |
 | `glossary.md` | Key terms |
 | `patterns.md` | Techniques and patterns |
@@ -71,17 +99,19 @@ See [workflows/](workflows/) for protocols. **Copy-ready prompts:** [workflows/e
 | `workflows/voice.md` | Response style + mandatory closings |
 | `workflows/examples.md` | Open copy-ready prompts (EN + FA) |
 
+## Validate
+
+```bash
+python3 tools/validate_skill.py SKILL.md              # Claude Code lens (default)
+python3 tools/validate_skill.py --lens copilot SKILL.md
+python3 tools/validate_skill.py --lens amp SKILL.md
+```
+
 ## Attribution
 
 Frameworks are **distilled** from Seyed's public *Strategy is Culture* session series. This is an independent community skill — not an official product or endorsement.
 
 Content is synthesized notes, not raw transcripts.
-
-## Validate
-
-```bash
-python3 tools/validate_skill.py SKILL.md
-```
 
 ## License
 

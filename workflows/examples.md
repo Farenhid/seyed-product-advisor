@@ -4,7 +4,7 @@ Open prompts — give context, ask what Seyed would say. **Don't** prescribe fra
 
 The agent follows [voice.md](voice.md): plain language, founder root-cause, and ends with **Principles Lens**, **Founder Mirror**, and **Session Sources**.
 
-Fill `[brackets]`. Optional: `.cursor/seyed-brief.md` for project context.
+Fill `[brackets]`. Optional: `.seyed-brief.md` (or `.cursor/seyed-brief.md`) for project context.
 
 ---
 

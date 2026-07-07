@@ -8,7 +8,7 @@ Follow [voice.md](voice.md) for response style and mandatory closings.
 
 Read in this order:
 
-1. `.cursor/seyed-brief.md` — if missing, ask the four questions below
+1. `.seyed-brief.md` or `.cursor/seyed-brief.md` — if missing, ask the four questions below
 2. `README.md`
 3. Manifest: `package.json`, `pyproject.toml`, `Cargo.toml`, `go.mod`, or equivalent
 4. Top-level structure: `src/`, `app/`, `lib/`, `docs/`, `api/`
