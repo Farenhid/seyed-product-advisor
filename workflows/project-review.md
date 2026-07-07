@@ -2,6 +2,8 @@
 
 Use when the user asks to review their product, startup, pitch, or strategy.
 
+Follow [voice.md](voice.md) for response style and mandatory closings.
+
 ## Step 1 — Scan the project (mandatory)
 
 Read in this order:
@@ -21,9 +23,10 @@ If the user points at specific files, read those too.
 3. What stage: idea, MVP, growth, or scale?
 4. What is the pin problem (the one problem you own)?
 
-## Step 2 — Load relevant skill chapters
+## Step 2 — Load skill files
 
-From the Topic Index in `SKILL.md`, read 2–4 chapter files that match the product type:
+1. [principles.md](../principles.md) — always first
+2. 2–4 chapter files from Topic Index in `SKILL.md` that match the product type:
 
 | Situation | Start with |
 |-----------|------------|
@@ -39,39 +42,22 @@ Also check `patterns.md` and `cheatsheet.md` for decision rules.
 
 ## Step 3 — Produce the review
 
-Use this output structure:
+Use the flow from [voice.md](voice.md):
 
-```markdown
-## Product Snapshot
-<one paragraph from what you read>
-
-## Pin Problem
-<your assessment — is it clear, real, differentiated?>
-
-## Frameworks Applied
-- **<Framework>**: <how it applies>
-
-## Strengths
-- ...
-
-## Risks & Anti-patterns
-- **<Anti-pattern>**: <why it matters here>
-
-## Verdict
-<2–3 sentences — honest, principles-first>
-
-## Next 3 Actions
-1. ...
-2. ...
-3. ...
-
-## Session Sources
-(mandatory — see SKILL.md)
-```
+1. **What I see** — plain snapshot
+2. **The real question** — reframe the problem
+3. **If Seyed were here** — empathetic founder talk
+4. **What this led to** — evidence in accessible language
+5. **What to do** — few clear actions
+6. **Principles Lens** — mandatory
+7. **Founder Mirror** — mandatory
+8. **Session Sources** — mandatory
 
 ## Voice
 
-- Principles-first, not generic startup advice
-- Challenge assumptions (Status Quo Challenge) when the project copies competitors
-- Name frameworks exactly as Seyed teaches them
+- Plain language — no insider jargon without explanation
+- Root cause before symptoms
+- Speak to the founder with empathy ("I sense you...")
+- Challenge assumptions when the project copies competitors or adds features on a broken core
 - Prefer "rethink the problem" over "add more features"
+- Do NOT open with numbered audit lists or commit archaeology

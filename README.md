@@ -46,7 +46,7 @@ Open any project in Cursor and ask:
 
 1. **Scans your project** — README, structure, optional `seyed-brief.md`
 2. **Loads relevant frameworks** — from 95 distilled session chapters
-3. **Responds** in Seyed's voice — picks relevant sessions, ends with **Session Sources** (chapter + brief summary)
+3. **Responds** in plain language, founder-focused — ends with **Principles Lens**, **Founder Mirror**, and **Session Sources**
 
 ### Modes
 
@@ -61,12 +61,14 @@ See [workflows/](workflows/) for protocols. **Copy-ready prompts:** [workflows/e
 
 | File | Purpose |
 |------|---------|
+| `principles.md` | Foundational principles (read first by agent) |
 | `SKILL.md` | Core frameworks + chapter index |
 | `chapters/` | 95 session distillations (loaded on demand) |
 | `glossary.md` | Key terms |
 | `patterns.md` | Techniques and patterns |
 | `cheatsheet.md` | Decision rules |
 | `templates/project-brief.md` | Per-project context template |
+| `workflows/voice.md` | Response style + mandatory closings |
 | `workflows/examples.md` | Open copy-ready prompts (EN + FA) |
 
 ## Attribution

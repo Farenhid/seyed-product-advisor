@@ -28,6 +28,19 @@
 | **Communication** | Impression | Impact | Impression measures reach (vanity); Impact measures behavioral change (value). |
 | **Team Structure** | Large Teams (Domains) | Small Teams (Pins) | Large teams cover more ground but suffer fragmentation; Small teams move fast but have narrower scope. |
 
+### Founder Tells (symptom → mindset to explore)
+
+| Symptom | Founder pattern to explore |
+| :--- | :--- |
+| Many features, broken core | Feature creep / progress theater |
+| Marked Done while incidents open | Avoiding hard truth / metric obsession |
+| Replaced real engine with fake shortcut | Solution attachment / engineering comfort zone |
+| Two architectures running at once | Sunk cost fear / can't kill what you built |
+| Docs say X, decisions say Y | Culture drift / not living principles |
+| Building distribution before supply works | Impatience / avoiding the hard loop |
+| Competitor parity drives roadmap | Status quo bias / competition mindset |
+| Pitch says production ready, core isn't | Underpromise violation / marketing before value |
+
 ### Tells & Smells (Red Flags)
 
 | Symptom | Underlying Issue |

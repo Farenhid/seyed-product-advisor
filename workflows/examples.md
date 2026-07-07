@@ -2,7 +2,7 @@
 
 Open prompts — give context, ask what Seyed would say. **Don't** prescribe frameworks or output shape; let the agent choose.
 
-Every answer should end with **Session Sources** (see SKILL.md).
+The agent follows [voice.md](voice.md): plain language, founder root-cause, and ends with **Principles Lens**, **Founder Mirror**, and **Session Sources**.
 
 Fill `[brackets]`. Optional: `.cursor/seyed-brief.md` for project context.
 
@@ -117,7 +117,7 @@ If Seyed were here, what would he say?
 **Do:** real context — product, stage, what you're deciding, constraints  
 **Don't:** list frameworks, chapters, or bullet-point output format
 
-The agent picks relevant sessions. You get sources at the end.
+The agent picks relevant sessions and principles. You get Principles Lens, Founder Mirror, and Session Sources at the end.
 
 Bad (too shallow): `نقد کن`  
 Bad (too prescriptive): `use ch29 and Tit-for-Tat and give Build/Defer/Rethink`  

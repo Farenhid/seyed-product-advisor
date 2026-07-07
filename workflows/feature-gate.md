@@ -2,41 +2,53 @@
 
 Use **before** the user implements a new feature. Run after project scan (see `project-review.md` Step 1).
 
+Follow [voice.md](voice.md) for response style and mandatory closings.
+
 ## Step 1 — Restate the feature
 
 One sentence: what the user wants to build and for whom.
 
-## Step 2 — Principle-First check
+## Step 2 — Founder motivation
 
-Ask internally:
+Ask internally: **why does the founder want this now?**
+- User pull, or founder comfort?
+- Core loop proven, or building on sand?
+- Avoiding a harder problem?
+
+## Step 3 — Principle check
+
+Read [principles.md](../principles.md). Ask internally:
 
 - Is this solving the **pin problem** or a distraction?
-- Is the problem framed correctly, or are we in **Solution-First** / **Engineer Trap** territory?
-- Would a **Design Thinker** question whether this feature should exist at all?
+- Does it align with **less is more** / **subtraction**?
+- Is the problem framed correctly, or **solution attachment**?
+- **Day 0 test**: would you start building this today?
 
-## Step 3 — Strategic lenses
+## Step 4 — Load chapters
 
-Apply whichever fit (read matching chapters if unsure):
+Read 1–3 relevant chapters from Topic Index if needed.
 
-| Lens | Question |
-|------|----------|
-| Monopoly / competition | Does this escape competition or enter a feature war? (ch09, ch29) |
-| Platform / network | Does this strengthen network effects or add linear cost? (ch16, ch31, ch62) |
-| Product vs project | Is this a product capability or a one-off project? (ch27) |
-| Mechanism | Does this change **how** the product works, or just add surface area? (ch58, ch91) |
-| Purpose | Does this serve the stated purpose, or dilute it? (ch25, ch34) |
+## Step 5 — Codebase check
 
-## Step 4 — Codebase check
-
-Before endorsing implementation, identify:
+Before endorsing implementation:
 
 - Files/modules the feature will touch
-- Whether similar functionality already exists (avoid duplicate mechanics)
+- Whether similar functionality already exists
 - What would break if the feature is removed in 6 months
 
-## Step 5 — Verdict
+## Step 6 — Produce the answer
 
-Choose one and justify:
+Use the flow from [voice.md](voice.md):
+
+1. **What I see** — the feature in context
+2. **The real question** — should this exist at all?
+3. **If Seyed were here** — honest take (build / defer / rethink) in plain language
+4. **What to do** — if build: constraints; if not: what to do instead
+5. **Principles Lens** — mandatory
+6. **Founder Mirror** — mandatory (why do you want this feature?)
+7. **Session Sources** — mandatory
+
+## Verdict guidance (internal)
 
 | Verdict | When |
 |---------|------|
@@ -44,28 +56,4 @@ Choose one and justify:
 | **Defer** | Valid idea, wrong timing or missing prerequisite |
 | **Rethink** | Wrong problem, copycat feature, linear cost, or purpose drift |
 
-## Output template
-
-```markdown
-## Feature
-<restatement>
-
-## Principle-First Check
-<pass / fail + why>
-
-## Strategic Lens
-<2–3 frameworks applied>
-
-## Codebase Notes
-<what to read or change>
-
-## Verdict: Build | Defer | Rethink
-<reasoning>
-
-## If Build — constraints
-- Do: ...
-- Avoid: ...
-
-## Session Sources
-(mandatory — see SKILL.md)
-```
+State verdict in plain language inside the main body — not as a rigid label unless it helps clarity.
