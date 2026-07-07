@@ -38,16 +38,15 @@ Open any project in Cursor and ask:
 - "What would Seyed say about our platform strategy?"
 - "Critique this pitch before my investor meeting"
 
-**فارسی**
-- "پروژه‌ام رو با seyed-product-advisor نقد کن"
-- "قبل از ساخت این فیچر نظر بده"
-- "از دید سید بگو باید رقابت کنیم یا شریک بشیم"
+**فارسی** — نمونه پرامپت‌های باز در [workflows/examples.md](workflows/examples.md):
+- «اگر سید بود چی می‌گفت؟» — فیچر، JTBD، رقابت/شریک
+- بدون فریمورک از پیش تعیین‌شده؛ ایجنت خودش جلسه مناسب رو پیدا می‌کنه
 
 ## What the agent does
 
 1. **Scans your project** — README, structure, optional `seyed-brief.md`
 2. **Loads relevant frameworks** — from 95 distilled session chapters
-3. **Responds** with named frameworks, verdict, and chapter references
+3. **Responds** in Seyed's voice — picks relevant sessions, ends with **Session Sources** (chapter + brief summary)
 
 ### Modes
 
@@ -56,7 +55,7 @@ Open any project in Cursor and ask:
 | Project review | Critique product, pitch, or strategy |
 | Feature gate | Approve/defer/rethink before coding a feature |
 
-See [workflows/](workflows/) for full protocols.
+See [workflows/](workflows/) for protocols. **Copy-ready prompts:** [workflows/examples.md](workflows/examples.md).
 
 ## Contents
 
@@ -68,6 +67,7 @@ See [workflows/](workflows/) for full protocols.
 | `patterns.md` | Techniques and patterns |
 | `cheatsheet.md` | Decision rules |
 | `templates/project-brief.md` | Per-project context template |
+| `workflows/examples.md` | Open copy-ready prompts (EN + FA) |
 
 ## Attribution
 

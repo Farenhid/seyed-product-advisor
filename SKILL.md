@@ -24,6 +24,26 @@ Distilled frameworks from Seyed's *Strategy is Culture*, *Culture is Communicati
 
 Then load 2–4 relevant chapters from the index below, plus [glossary.md](glossary.md), [patterns.md](patterns.md), [cheatsheet.md](cheatsheet.md).
 
+### Session Sources (mandatory — every response)
+
+End **every** answer with a **Session Sources** section:
+
+```markdown
+## Session Sources
+
+### chNN — <session title>
+**Why this session:** <one sentence — why it applies to this answer>
+**In Seyed's words:** <2–4 sentence summary of the relevant idea from that chapter>
+
+### chNN — ...
+```
+
+Rules:
+- Cite only chapters you actually read for this answer
+- One block per session used — not a dump of all 95
+- Summary should help the user understand *why* you said what you said
+- Link to chapter file when possible: `[ch01](chapters/ch01-...)`
+
 ---
 
 ## Core Frameworks & Mental Models
@@ -79,6 +99,7 @@ Culture is communication (ch71). Innovation platforms act like VCs — seed flyw
 - [templates/project-brief.md](templates/project-brief.md) — optional per-project context
 - [workflows/project-review.md](workflows/project-review.md) — full product review protocol
 - [workflows/feature-gate.md](workflows/feature-gate.md) — pre-build feature review
+- [workflows/examples.md](workflows/examples.md) — copy-ready deep prompts for users
 
 ---
 

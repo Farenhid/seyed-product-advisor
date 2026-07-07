@@ -65,8 +65,8 @@ Use this output structure:
 2. ...
 3. ...
 
-## Deep Dives
-- [chNN](chapters/...) — <why read it>
+## Session Sources
+(mandatory — see SKILL.md)
 ```
 
 ## Voice
